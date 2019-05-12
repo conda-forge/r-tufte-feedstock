@@ -1,4 +1,4 @@
-{% set version = '0.4' %}
+{% set version = "0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tufte_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tufte/tufte_{{ version }}.tar.gz
-  sha256: 0bffa5d9579739646b4e06802c12d1a45a23d6d3a7f8eed8ac41288c96cee76e
+  sha256: 72cb935e13ec8229182b5660079745ca828169165e239b1445d89399adad7134
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
