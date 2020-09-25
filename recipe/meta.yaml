@@ -1,4 +1,4 @@
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tufte_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tufte/tufte_{{ version }}.tar.gz
-  sha256: 92fb73f4d51c384d89c7eede689217040c905810fb8e27052f99c110632d15a8
+  sha256: c433b61b46d5d4d066f3d82b11cb2ecb5e9bdf5b6fb9a8e2f4eb1febf3df5d5d
 
 build:
   merge_build_host: true  # [win]
@@ -26,15 +26,15 @@ requirements:
   host:
     - r-base
     - r-htmltools
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
-    - r-xfun >=0.6
+    - r-knitr >=1.28
+    - r-rmarkdown >=2.1
+    - r-xfun >=0.13
   run:
     - r-base
     - r-htmltools
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
-    - r-xfun >=0.6
+    - r-knitr >=1.28
+    - r-rmarkdown >=2.1
+    - r-xfun >=0.13
 
 test:
   commands:
@@ -43,10 +43,11 @@ test:
 
 about:
   home: https://github.com/rstudio/tufte
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Provides R Markdown output formats to use Tufte styles for PDF and HTML output.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
