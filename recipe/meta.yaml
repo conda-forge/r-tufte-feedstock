@@ -26,15 +26,15 @@ requirements:
   host:
     - r-base
     - r-htmltools
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
-    - r-xfun >=0.6
+    - r-knitr >=1.28
+    - r-rmarkdown >=2.1
+    - r-xfun >=0.13
   run:
     - r-base
     - r-htmltools
-    - r-knitr >=1.22
-    - r-rmarkdown >=1.12
-    - r-xfun >=0.6
+    - r-knitr >=1.28
+    - r-rmarkdown >=2.1
+    - r-xfun >=0.13
 
 test:
   commands:
@@ -43,10 +43,11 @@ test:
 
 about:
   home: https://github.com/rstudio/tufte
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Provides R Markdown output formats to use Tufte styles for PDF and HTML output.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
