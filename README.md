@@ -5,7 +5,7 @@ Home: https://github.com/rstudio/tufte
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Provides R Markdown output formats to use Tufte styles for PDF and HTML output.
 
